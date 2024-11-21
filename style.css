@@ -48,7 +48,11 @@ span {
     justify-content: center;
     align-items: center;
 }
-
+#totalAmount {
+    background-color: gray;
+    color: white;
+    cursor: context-menu;
+}
 /* Navigation Styles */
 nav ul {
     display: flex;
