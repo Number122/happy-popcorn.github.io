@@ -1,4 +1,3 @@
-/* Global Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,6 +10,10 @@ html {
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+    width: 0;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -18,12 +21,6 @@ body {
     color: #e0e0e0;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-    width: 0;
-}
-
-/* Header Styles */
 header {
     background-color: #1f1f1f;
     padding: 20px 0;
@@ -37,23 +34,6 @@ span {
     color: #ffcc00;
 }
 
-#cartCount {
-    font-size: 1.2rem;
-    width: 30px;
-    height: 30px;
-    border: 2px solid #ffcc00;
-    border-radius: 50%;
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#totalAmount {
-    background-color: gray;
-    color: white;
-    cursor: context-menu;
-}
-/* Navigation Styles */
 nav ul {
     display: flex;
     flex-direction: row;
@@ -63,6 +43,7 @@ nav ul {
 }
 
 nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
@@ -71,22 +52,18 @@ nav ul li a {
     color: #e0e0e0;
     font-weight: bold;
     transition: color 0.3s;
-    display: flex;
-    align-items: center;
 }
 
 nav ul li a:hover {
     color: #ffcc00;
 }
 
-/* Container Styles */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
 }
 
-/* Staff Grid Styles */
 .staff-grid {
     display: flex;
     justify-content: space-around;
@@ -125,7 +102,6 @@ nav ul li a:hover {
     transform: scale(1.08);
 }
 
-/* Section Styles */
 section {
     margin: 40px;
     padding: 20px;
@@ -139,7 +115,6 @@ h2 {
     color: #ffcc00;
 }
 
-/* Product Grid Styles */
 .product-grid {
     display: flex;
     flex-wrap: wrap;
@@ -185,9 +160,8 @@ h2 {
     font-size: 1.2rem;
 }
 
-/* Button Styles */
 button {
-    background-color : #ffcc00;
+    background-color: #ffcc00;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -201,7 +175,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Footer Styles */
 footer {
     text-align: center;
     padding: 20px;
@@ -215,7 +188,6 @@ footer p {
     color: #e0e0e0;
 }
 
-/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -225,7 +197,8 @@ footer p {
     width: 100%; 
     height: 100%; 
     overflow: auto; 
-    background-color: rgba(0, 0, 0, 0.9); 
+    background-color: rgba(0, 0, 0 , 0.9); 
+
 }
 
 .modal-content {
@@ -240,7 +213,6 @@ footer p {
     text-align: center;
 }
 
-/* Input Styles */
 .nameInput {
     width: 100%;
     height: 30px;
@@ -249,7 +221,6 @@ footer p {
     font-size: 1.3rem;
 }
 
-/* Close Button Styles */
 .close {
     color: #e0e0e0;
     float: right;
@@ -264,7 +235,6 @@ footer p {
     cursor: pointer;
 }
 
-/* Contact Form Styles */
 .contact-form .form-group {
     display: flex;
     flex-direction: column;

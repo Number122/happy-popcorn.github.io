@@ -17,7 +17,6 @@
                     <li><a href="#products"><i class="ri-shopping-basket-2-line"></i> Products</a></li>
                     <li><a href="#about"><i class="ri-information-line"></i> About Us</a></li>
                     <li><a href="#contact"><i class="ri-mail-line"></i> Contact</a></li>
-                    <li><a href="#cart"><i class="ri-shopping-cart-line"></i> Cart <span id="cartCount">0</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -31,25 +30,26 @@
                 <h3>Classic Butter</h3>
                 <p>Deliciously buttery popcorn.</p>
                 <span>$5.00</span>
-                <button onclick="addToCart('Classic Butter', 5.00)">Add to Cart</button>
+                <button>Add to Cart</button>
             </div>
             <div class="product">
                 <img src="images/cheddar-cheese.png" alt="Cheddar Cheese Popcorn">
                 <h3>Cheddar Cheese</h3>
                 <p>Rich and cheesy popcorn.</p>
                 <span>$6.00</span>
-                <button onclick="addToCart('Cheddar Cheese', 6.00)">Add to Cart</button>
+                <button>Add to Cart</button>
             </div>
             <div class="product">
                 <img src="images/caramel-crunch.png" alt="Caramel Crunch Popcorn">
                 <h3>Caramel Crunch</h3>
                 <p>Sweet and crunchy caramel popcorn.</p>
                 <span>$7.00</span>
-                <button onclick="addToCart('Caramel Crunch', 7.00)">Add to Cart</button>
+                <button>Add to Cart</button>
             </div>
         </div>
     </section>
 
+    <section class="container about-us-container">
     <section id="about" class="container about-us-container">
         <h2>Management</h2>
         <div class="staff-grid">
@@ -71,14 +71,6 @@
         </div>
     </section>
 
-    <section id="cart" class="container">
-        <h2>Your Cart</h2>
-        <div id="cartItems">
-            <button id="checkoutButton" onclick="checkout()">Checkout</button>
-            <button id="totalAmount">$0.00</button>
-        </div>
-    </section>
-    
     <section id="contact" class="container">
         <h2>Contact Us</h2>
         <div class="contact-form">
@@ -104,6 +96,8 @@
         <p>&copy; 2023 Happy Popcorn. All rights reserved.</p>
     </footer>
 
+    <!--TODO: design modal structure -->
+
     <div id="cartModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -122,4 +116,3 @@
     </div>
     <script src="script.js"></script>
 </body>
-</html>
