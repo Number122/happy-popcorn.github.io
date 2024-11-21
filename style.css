@@ -34,6 +34,18 @@ span {
     color: #ffcc00;
 }
 
+#cartCount {
+    font-size: 1.2rem;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ffcc00;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 nav ul {
     display: flex;
     flex-direction: row;
@@ -51,6 +63,8 @@ nav ul li a {
     color: #e0e0e0;
     font-weight: bold;
     transition: color 0.3s;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li a:hover {
