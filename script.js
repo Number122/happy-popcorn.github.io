@@ -36,13 +36,17 @@ document.getElementById("cartForm").addEventListener("submit", function(event) {
 });
 
 function addToCart(name, price) {
-    cart.push({ name, price });
+    const existingProduct = cart.find(item => item.name === name);
+    
+    if (existingProduct) {
+        existingProduct.quantity += 1;
+    } else {
+        cart.push({ name, price, quantity: 1 });
+    }
+    
     document.getElementById('cartCount').innerText = cart.length;
     updateCartDisplay();
-    document.getElementById('flavorName').innerText = name;
-    document.getElementById('currentDate').innerText = new Date().toLocaleDateString();
-    document.getElementById('currentTime').innerText = new Date().toLocaleTimeString();
-    document.getElementById('cartModal').style.display = 'block';
+    updateTotal(); // Update total whenever an item is added
 }
 
 function updateCartDisplay() {
@@ -50,9 +54,14 @@ function updateCartDisplay() {
     cartItemsDiv.innerHTML = '';
     cart.forEach(item => {
         const itemDiv = document.createElement('div');
-        itemDiv.innerText = `${item.name} - $${item.price.toFixed(2)}`;
+        itemDiv.innerText = `${item.name} - $${item.price.toFixed(2)} (x${item.quantity})`;
         cartItemsDiv.appendChild(itemDiv);
     });
+}
+
+function updateTotal() {
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    document.getElementById('totalAmount').innerText = `$${total.toFixed(2)}`;
 }
 
 function checkout() {
