@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>Happy Popcorn</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to <span>Happy Popcorn!</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#products"><i class="ri-shopping-basket-2-line"></i> Products</a></li>
+                    <li><a href="#about"><i class="ri-information-line"></i> About Us</a></li>
+                    <li><a href="#contact"><i class="ri-mail-line"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="products" class="container">
+        <h2>Our Popcorn Flavors</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="images/classic-butter.png" alt="Classic Butter Popcorn">
+                <h3>Classic Butter</h3>
+                <p>Deliciously buttery popcorn.</p>
+                <span>$5.00</span>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/cheddar-cheese.png" alt="Cheddar Cheese Popcorn">
+                <h3>Cheddar Cheese</h3>
+                <p>Rich and cheesy popcorn.</p>
+                <span>$6.00</span>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/caramel-crunch.png" alt="Caramel Crunch Popcorn">
+                <h3>Caramel Crunch</h3>
+                <p>Sweet and crunchy caramel popcorn.</p>
+                <span>$7.00</span>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container about-us-container">
+        <h2>Management</h2>
+        <div class="staff-grid">
+            <div class="staff-member">
+                <img src="images/eminem.jpg" alt="Staff Member 1">
+                <h3>Marshall Mathers</h3>
+                <p>CEO</p>
+            </div>
+            <div class="staff-member">
+                <img src="images/elonmusk.jpg" alt="Staff Member 2">
+                <h3>Elon Musk</h3>
+                <p>CTO</p>
+            </div>
+            <div class="staff-member">
+                <img src="images/pauldurov.jpg" alt="Staff Member 3">
+                <h3>Paul Durov</h3>
+                <p>Designer</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form action="submit_contact.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Happy Popcorn. All rights reserved.</p>
+    </footer>
+
+    <!--TODO: design modal structure -->
+    
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add to Cart</h2>
+            <p id="flavorName"></p>
+            <p>Date: <span id="currentDate"></span></p>
+            <p>Time: <span id="currentTime"></span></p>
+            <form id="cartForm">
+                <div class="form-group">
+                    <label for="userName">Your Name:</label>
+                    <input type="text" id="userName" name="userName" required>
+                </div>
+                <button type="submit">Confirm</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
